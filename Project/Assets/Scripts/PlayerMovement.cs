@@ -48,4 +48,14 @@ public class PlayerMovement : MonoBehaviour
             FindObjectOfType<GameManager>().EndGame();
         }
     }
+
+    public void slowDown()
+    {
+        forwardForce=forwardForce/2;
+    }
+
+    public void speedUp()
+    {
+        forwardForce=forwardForce*2;
+    }
 }

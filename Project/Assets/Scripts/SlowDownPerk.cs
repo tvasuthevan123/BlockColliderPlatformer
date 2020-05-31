@@ -4,15 +4,22 @@ using UnityEngine;
 
 public class SlowDownPerk : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public PlayerMovement player;
+    // Update is called once per frame
+    void OnTriggerEnter(Collider info)
     {
-        
+        if(info.CompareTag("Player"))
+        {
+            slowMo();
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    IEnumerator slowMo()
     {
-        
+        player.slowDown();
+
+        yield return new WaitForSeconds(3);
+
+        player.speedUp();
     }
 }
