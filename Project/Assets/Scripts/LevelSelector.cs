@@ -16,7 +16,7 @@ public class LevelSelector : MonoBehaviour
         int levelNumber = SceneManager.sceneCountInBuildSettings;
         Debug.Log(levelNumber);  
         // levels = new Button[levelNumber];
-        for(int i=2; i<levelNumber; i++)
+        for(int i=2; i<levelNumber-1; i++)
         {
             Debug.Log(i);
             Button levelButton = Instantiate(ButtonPrefab);
